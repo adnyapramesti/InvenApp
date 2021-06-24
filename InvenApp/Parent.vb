@@ -22,71 +22,8 @@
         End If
     End Sub
 
-    Private Sub MenuPanel_Paint(sender As Object, e As PaintEventArgs) Handles MenuPanel.Paint
 
-    End Sub
-
-    Private Sub HeaderMenu_Paint(sender As Object, e As PaintEventArgs) Handles HeaderMenu.Paint
-
-    End Sub
-
-    Private Sub Guna2TextBox1_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Guna2TextBox4_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Guna2TextBox3_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Guna2TextBox2_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub HeaderSliding_Paint(sender As Object, e As PaintEventArgs) Handles HeaderSliding.Paint
-
-    End Sub
-
-    Private Sub SlidingPanel_Paint(sender As Object, e As PaintEventArgs) Handles SlidingPanel.Paint
-
-    End Sub
-
-    Private Sub Guna2Button7_Click(sender As Object, e As EventArgs) Handles Guna2Button7.Click
-        Me.Close()
-    End Sub
-
-    Private Sub Guna2Button8_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Guna2Button5_Click(sender As Object, e As EventArgs) Handles Guna2Button5.Click
+    Private Sub Guna2Button5_Click(sender As Object, e As EventArgs) Handles btnkembali.Click
         Tambah.Close()
         List.Close()
         History.Close()
@@ -97,7 +34,7 @@
         Kembali.Show()
     End Sub
 
-    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
         History.Close()
         List.Close()
         Kembali.Close()
@@ -108,7 +45,7 @@
         Tambah.Show()
     End Sub
 
-    Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
+    Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles btnPinjam.Click
         Tambah.Close()
         List.Close()
         Kembali.Close()
@@ -119,7 +56,7 @@
         Pinjam.Show()
     End Sub
 
-    Private Sub Guna2Button4_Click(sender As Object, e As EventArgs) Handles Guna2Button4.Click
+    Private Sub Guna2Button4_Click(sender As Object, e As EventArgs) Handles btnLihat.Click
         Tambah.Close()
         History.Close()
         Kembali.Close()
@@ -129,7 +66,7 @@
         List.Show()
     End Sub
 
-    Private Sub Guna2Button6_Click(sender As Object, e As EventArgs) Handles Guna2Button6.Click
+    Private Sub Guna2Button6_Click(sender As Object, e As EventArgs) Handles btnHistory.Click
         Tambah.Close()
         List.Close()
         Kembali.Close()

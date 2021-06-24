@@ -7,7 +7,7 @@
 
     End Sub
 
-    Private Sub Guna2TextBox1_TextChanged(sender As Object, e As EventArgs) Handles Guna2TextBox1.TextChanged
+    Private Sub Guna2TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtJumlah.TextChanged
 
     End Sub
 End Class
