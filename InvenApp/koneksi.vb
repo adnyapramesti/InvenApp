@@ -5,6 +5,7 @@ Module Koneksi
     Public DA As OdbcDataAdapter
     Public DR As OdbcDataReader
     Public DS As DataSet
+    Public DT As DataTable
     Public CMD As OdbcCommand
 
     Sub BukaDB()

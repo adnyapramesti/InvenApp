@@ -33,7 +33,7 @@ Partial Class Edit
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.HeaderMenu = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnExit = New Guna.UI2.WinForms.Guna2Button()
         Me.txtJumlah = New Guna.UI2.WinForms.Guna2TextBox()
         Me.MenuPanel = New Guna.UI2.WinForms.Guna2Panel()
         Me.txtNmBarang = New Guna.UI2.WinForms.Guna2TextBox()
@@ -45,9 +45,10 @@ Partial Class Edit
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(58, 95)
+        Me.Label5.Location = New System.Drawing.Point(39, 62)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(227, 40)
+        Me.Label5.Size = New System.Drawing.Size(156, 29)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Edit Barang "
         '
@@ -58,19 +59,21 @@ Partial Class Edit
         Me.btnEdit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnEdit.ForeColor = System.Drawing.Color.White
         Me.btnEdit.HoverState.Parent = Me.btnEdit
-        Me.btnEdit.Location = New System.Drawing.Point(62, 446)
+        Me.btnEdit.Location = New System.Drawing.Point(41, 290)
+        Me.btnEdit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.ShadowDecoration.Parent = Me.btnEdit
-        Me.btnEdit.Size = New System.Drawing.Size(180, 45)
+        Me.btnEdit.Size = New System.Drawing.Size(120, 29)
         Me.btnEdit.TabIndex = 9
         Me.btnEdit.Text = "Edit Barang"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(62, 371)
+        Me.Label4.Location = New System.Drawing.Point(41, 241)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(119, 20)
+        Me.Label4.Size = New System.Drawing.Size(81, 13)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Kode Inventaris"
         '
@@ -88,21 +91,23 @@ Partial Class Edit
         Me.txtKdInventaris.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtKdInventaris.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtKdInventaris.HoverState.Parent = Me.txtKdInventaris
-        Me.txtKdInventaris.Location = New System.Drawing.Point(202, 371)
+        Me.txtKdInventaris.Location = New System.Drawing.Point(135, 241)
+        Me.txtKdInventaris.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtKdInventaris.Name = "txtKdInventaris"
         Me.txtKdInventaris.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtKdInventaris.PlaceholderText = ""
         Me.txtKdInventaris.SelectedText = ""
         Me.txtKdInventaris.ShadowDecoration.Parent = Me.txtKdInventaris
-        Me.txtKdInventaris.Size = New System.Drawing.Size(320, 35)
+        Me.txtKdInventaris.Size = New System.Drawing.Size(213, 23)
         Me.txtKdInventaris.TabIndex = 7
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(62, 308)
+        Me.Label3.Location = New System.Drawing.Point(41, 200)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(60, 20)
+        Me.Label3.Size = New System.Drawing.Size(41, 13)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Kondisi"
         '
@@ -120,30 +125,33 @@ Partial Class Edit
         Me.txtKondisi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtKondisi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtKondisi.HoverState.Parent = Me.txtKondisi
-        Me.txtKondisi.Location = New System.Drawing.Point(202, 308)
+        Me.txtKondisi.Location = New System.Drawing.Point(135, 200)
+        Me.txtKondisi.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtKondisi.Name = "txtKondisi"
         Me.txtKondisi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtKondisi.PlaceholderText = ""
         Me.txtKondisi.SelectedText = ""
         Me.txtKondisi.ShadowDecoration.Parent = Me.txtKondisi
-        Me.txtKondisi.Size = New System.Drawing.Size(320, 35)
+        Me.txtKondisi.Size = New System.Drawing.Size(213, 23)
         Me.txtKondisi.TabIndex = 5
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(62, 242)
+        Me.Label2.Location = New System.Drawing.Point(41, 157)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(60, 20)
+        Me.Label2.Size = New System.Drawing.Size(40, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Jumlah"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(62, 177)
+        Me.Label1.Location = New System.Drawing.Point(41, 115)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(107, 20)
+        Me.Label1.Size = New System.Drawing.Size(72, 13)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Nama Barang"
         '
@@ -153,29 +161,31 @@ Partial Class Edit
         '
         'HeaderMenu
         '
-        Me.HeaderMenu.Controls.Add(Me.Guna2Button2)
+        Me.HeaderMenu.Controls.Add(Me.btnExit)
         Me.HeaderMenu.Dock = System.Windows.Forms.DockStyle.Top
         Me.HeaderMenu.FillColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.HeaderMenu.Location = New System.Drawing.Point(0, 0)
+        Me.HeaderMenu.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.HeaderMenu.Name = "HeaderMenu"
         Me.HeaderMenu.ShadowDecoration.Parent = Me.HeaderMenu
-        Me.HeaderMenu.Size = New System.Drawing.Size(726, 77)
+        Me.HeaderMenu.Size = New System.Drawing.Size(484, 50)
         Me.HeaderMenu.TabIndex = 0
         '
-        'Guna2Button2
+        'btnExit
         '
-        Me.Guna2Button2.CheckedState.Parent = Me.Guna2Button2
-        Me.Guna2Button2.CustomImages.Parent = Me.Guna2Button2
-        Me.Guna2Button2.FillColor = System.Drawing.Color.Red
-        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.HoverState.Parent = Me.Guna2Button2
-        Me.Guna2Button2.Location = New System.Drawing.Point(669, 0)
-        Me.Guna2Button2.Name = "Guna2Button2"
-        Me.Guna2Button2.ShadowDecoration.Parent = Me.Guna2Button2
-        Me.Guna2Button2.Size = New System.Drawing.Size(54, 45)
-        Me.Guna2Button2.TabIndex = 14
-        Me.Guna2Button2.Text = "X"
+        Me.btnExit.CheckedState.Parent = Me.btnExit
+        Me.btnExit.CustomImages.Parent = Me.btnExit
+        Me.btnExit.FillColor = System.Drawing.Color.Red
+        Me.btnExit.Font = New System.Drawing.Font("Segoe UI", 20.0!)
+        Me.btnExit.ForeColor = System.Drawing.Color.White
+        Me.btnExit.HoverState.Parent = Me.btnExit
+        Me.btnExit.Location = New System.Drawing.Point(424, 0)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.ShadowDecoration.Parent = Me.btnExit
+        Me.btnExit.Size = New System.Drawing.Size(58, 48)
+        Me.btnExit.TabIndex = 14
+        Me.btnExit.Text = "X"
         '
         'txtJumlah
         '
@@ -191,13 +201,14 @@ Partial Class Edit
         Me.txtJumlah.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtJumlah.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtJumlah.HoverState.Parent = Me.txtJumlah
-        Me.txtJumlah.Location = New System.Drawing.Point(202, 242)
+        Me.txtJumlah.Location = New System.Drawing.Point(135, 157)
+        Me.txtJumlah.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtJumlah.Name = "txtJumlah"
         Me.txtJumlah.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtJumlah.PlaceholderText = ""
         Me.txtJumlah.SelectedText = ""
         Me.txtJumlah.ShadowDecoration.Parent = Me.txtJumlah
-        Me.txtJumlah.Size = New System.Drawing.Size(320, 35)
+        Me.txtJumlah.Size = New System.Drawing.Size(213, 23)
         Me.txtJumlah.TabIndex = 2
         '
         'MenuPanel
@@ -215,9 +226,10 @@ Partial Class Edit
         Me.MenuPanel.Controls.Add(Me.HeaderMenu)
         Me.MenuPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MenuPanel.Location = New System.Drawing.Point(0, 0)
+        Me.MenuPanel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MenuPanel.Name = "MenuPanel"
         Me.MenuPanel.ShadowDecoration.Parent = Me.MenuPanel
-        Me.MenuPanel.Size = New System.Drawing.Size(726, 692)
+        Me.MenuPanel.Size = New System.Drawing.Size(484, 450)
         Me.MenuPanel.TabIndex = 3
         '
         'txtNmBarang
@@ -234,23 +246,23 @@ Partial Class Edit
         Me.txtNmBarang.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtNmBarang.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNmBarang.HoverState.Parent = Me.txtNmBarang
-        Me.txtNmBarang.Location = New System.Drawing.Point(202, 177)
+        Me.txtNmBarang.Location = New System.Drawing.Point(135, 115)
+        Me.txtNmBarang.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtNmBarang.Name = "txtNmBarang"
         Me.txtNmBarang.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtNmBarang.PlaceholderText = ""
         Me.txtNmBarang.SelectedText = ""
         Me.txtNmBarang.ShadowDecoration.Parent = Me.txtNmBarang
-        Me.txtNmBarang.Size = New System.Drawing.Size(320, 35)
+        Me.txtNmBarang.Size = New System.Drawing.Size(213, 23)
         Me.txtNmBarang.TabIndex = 1
         '
         'Edit
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(726, 692)
+        Me.ClientSize = New System.Drawing.Size(484, 450)
         Me.Controls.Add(Me.MenuPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Edit"
         Me.Text = "Form6"
         Me.HeaderMenu.ResumeLayout(False)
@@ -272,5 +284,5 @@ Partial Class Edit
     Friend WithEvents txtJumlah As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents MenuPanel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents txtNmBarang As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnExit As Guna.UI2.WinForms.Guna2Button
 End Class

@@ -51,9 +51,10 @@ Partial Class Parent
         Me.HeaderSliding.Dock = System.Windows.Forms.DockStyle.Top
         Me.HeaderSliding.FillColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.HeaderSliding.Location = New System.Drawing.Point(0, 0)
+        Me.HeaderSliding.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.HeaderSliding.Name = "HeaderSliding"
         Me.HeaderSliding.ShadowDecoration.Parent = Me.HeaderSliding
-        Me.HeaderSliding.Size = New System.Drawing.Size(375, 77)
+        Me.HeaderSliding.Size = New System.Drawing.Size(250, 50)
         Me.HeaderSliding.TabIndex = 0
         '
         'SlidingButt
@@ -63,10 +64,9 @@ Partial Class Parent
         Me.SlidingButt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SlidingButt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.SlidingButt.Image = CType(resources.GetObject("SlidingButt.Image"), System.Drawing.Image)
-        Me.SlidingButt.Location = New System.Drawing.Point(300, 0)
-        Me.SlidingButt.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.SlidingButt.Location = New System.Drawing.Point(200, 0)
         Me.SlidingButt.Name = "SlidingButt"
-        Me.SlidingButt.Size = New System.Drawing.Size(75, 77)
+        Me.SlidingButt.Size = New System.Drawing.Size(50, 50)
         Me.SlidingButt.TabIndex = 0
         Me.SlidingButt.UseVisualStyleBackColor = False
         '
@@ -83,9 +83,10 @@ Partial Class Parent
         Me.SlidingPanel.Dock = System.Windows.Forms.DockStyle.Left
         Me.SlidingPanel.FillColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.SlidingPanel.Location = New System.Drawing.Point(0, 0)
+        Me.SlidingPanel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.SlidingPanel.Name = "SlidingPanel"
         Me.SlidingPanel.ShadowDecoration.Parent = Me.SlidingPanel
-        Me.SlidingPanel.Size = New System.Drawing.Size(375, 769)
+        Me.SlidingPanel.Size = New System.Drawing.Size(250, 500)
         Me.SlidingPanel.TabIndex = 0
         '
         'btnHistory
@@ -95,11 +96,10 @@ Partial Class Parent
         Me.btnHistory.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnHistory.ForeColor = System.Drawing.Color.White
         Me.btnHistory.HoverState.Parent = Me.btnHistory
-        Me.btnHistory.Location = New System.Drawing.Point(0, 409)
-        Me.btnHistory.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnHistory.Location = New System.Drawing.Point(0, 266)
         Me.btnHistory.Name = "btnHistory"
         Me.btnHistory.ShadowDecoration.Parent = Me.btnHistory
-        Me.btnHistory.Size = New System.Drawing.Size(375, 72)
+        Me.btnHistory.Size = New System.Drawing.Size(250, 47)
         Me.btnHistory.TabIndex = 12
         Me.btnHistory.Text = "Hitory Barang"
         '
@@ -110,11 +110,10 @@ Partial Class Parent
         Me.btnkembali.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnkembali.ForeColor = System.Drawing.Color.White
         Me.btnkembali.HoverState.Parent = Me.btnkembali
-        Me.btnkembali.Location = New System.Drawing.Point(0, 329)
-        Me.btnkembali.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnkembali.Location = New System.Drawing.Point(0, 214)
         Me.btnkembali.Name = "btnkembali"
         Me.btnkembali.ShadowDecoration.Parent = Me.btnkembali
-        Me.btnkembali.Size = New System.Drawing.Size(375, 72)
+        Me.btnkembali.Size = New System.Drawing.Size(250, 47)
         Me.btnkembali.TabIndex = 11
         Me.btnkembali.Text = "Pengembalian Barang"
         '
@@ -125,11 +124,10 @@ Partial Class Parent
         Me.btnLihat.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnLihat.ForeColor = System.Drawing.Color.White
         Me.btnLihat.HoverState.Parent = Me.btnLihat
-        Me.btnLihat.Location = New System.Drawing.Point(0, 251)
-        Me.btnLihat.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnLihat.Location = New System.Drawing.Point(0, 163)
         Me.btnLihat.Name = "btnLihat"
         Me.btnLihat.ShadowDecoration.Parent = Me.btnLihat
-        Me.btnLihat.Size = New System.Drawing.Size(375, 72)
+        Me.btnLihat.Size = New System.Drawing.Size(250, 47)
         Me.btnLihat.TabIndex = 10
         Me.btnLihat.Text = "Lihat Barang"
         '
@@ -140,11 +138,10 @@ Partial Class Parent
         Me.btnPinjam.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnPinjam.ForeColor = System.Drawing.Color.White
         Me.btnPinjam.HoverState.Parent = Me.btnPinjam
-        Me.btnPinjam.Location = New System.Drawing.Point(2, 172)
-        Me.btnPinjam.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnPinjam.Location = New System.Drawing.Point(1, 112)
         Me.btnPinjam.Name = "btnPinjam"
         Me.btnPinjam.ShadowDecoration.Parent = Me.btnPinjam
-        Me.btnPinjam.Size = New System.Drawing.Size(375, 72)
+        Me.btnPinjam.Size = New System.Drawing.Size(250, 47)
         Me.btnPinjam.TabIndex = 9
         Me.btnPinjam.Text = "Pinjam Barang"
         '
@@ -155,11 +152,10 @@ Partial Class Parent
         Me.btnTambah.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnTambah.ForeColor = System.Drawing.Color.White
         Me.btnTambah.HoverState.Parent = Me.btnTambah
-        Me.btnTambah.Location = New System.Drawing.Point(0, 95)
-        Me.btnTambah.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnTambah.Location = New System.Drawing.Point(0, 62)
         Me.btnTambah.Name = "btnTambah"
         Me.btnTambah.ShadowDecoration.Parent = Me.btnTambah
-        Me.btnTambah.Size = New System.Drawing.Size(375, 72)
+        Me.btnTambah.Size = New System.Drawing.Size(250, 47)
         Me.btnTambah.TabIndex = 8
         Me.btnTambah.Text = "Tambah Barang"
         '
@@ -171,10 +167,11 @@ Partial Class Parent
         Me.Guna2Button7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button7.ForeColor = System.Drawing.Color.White
         Me.Guna2Button7.HoverState.Parent = Me.Guna2Button7
-        Me.Guna2Button7.Location = New System.Drawing.Point(0, 686)
+        Me.Guna2Button7.Location = New System.Drawing.Point(0, 446)
+        Me.Guna2Button7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Guna2Button7.Name = "Guna2Button7"
         Me.Guna2Button7.ShadowDecoration.Parent = Me.Guna2Button7
-        Me.Guna2Button7.Size = New System.Drawing.Size(372, 66)
+        Me.Guna2Button7.Size = New System.Drawing.Size(248, 43)
         Me.Guna2Button7.TabIndex = 7
         Me.Guna2Button7.Text = "EXIT"
         '
@@ -183,30 +180,33 @@ Partial Class Parent
         Me.HeaderMenu.Dock = System.Windows.Forms.DockStyle.Top
         Me.HeaderMenu.FillColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.HeaderMenu.Location = New System.Drawing.Point(0, 0)
+        Me.HeaderMenu.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.HeaderMenu.Name = "HeaderMenu"
         Me.HeaderMenu.ShadowDecoration.Parent = Me.HeaderMenu
-        Me.HeaderMenu.Size = New System.Drawing.Size(983, 77)
+        Me.HeaderMenu.Size = New System.Drawing.Size(655, 50)
         Me.HeaderMenu.TabIndex = 0
         '
         'MenuPanel
         '
         Me.MenuPanel.Controls.Add(Me.HeaderMenu)
         Me.MenuPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MenuPanel.Location = New System.Drawing.Point(375, 0)
+        Me.MenuPanel.Location = New System.Drawing.Point(250, 0)
+        Me.MenuPanel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MenuPanel.Name = "MenuPanel"
         Me.MenuPanel.ShadowDecoration.Parent = Me.MenuPanel
-        Me.MenuPanel.Size = New System.Drawing.Size(983, 769)
+        Me.MenuPanel.Size = New System.Drawing.Size(655, 500)
         Me.MenuPanel.TabIndex = 1
         '
         'Parent
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1358, 769)
+        Me.ClientSize = New System.Drawing.Size(905, 500)
         Me.Controls.Add(Me.MenuPanel)
         Me.Controls.Add(Me.SlidingPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.IsMdiContainer = True
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Parent"
         Me.Text = "Form1"
         Me.HeaderSliding.ResumeLayout(False)
