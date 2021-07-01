@@ -1,31 +1,94 @@
-﻿Public Class Kembali
-    Private Sub List_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+﻿Imports System.Data.Odbc
+Public Class Kembali
+    Dim jum, a, b As Integer
+
+    Private Sub Kembali_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BukaDB()
+
         isiGrid()
-        setHeader()
+
+    End Sub
+
+
+
+
+
+    Private Sub txtPeminjam_TextChanged(sender As Object, e As EventArgs) Handles txtPeminjam.TextChanged
+        Try
+            DA = New Odbc.OdbcDataAdapter("SELECT * FROM `tb_pinjam` where status = 'belum kembali' AND nama_peminjam LIKE %'" & txtPeminjam.Text & "'", conn)
+            DS = New DataSet
+            DA.Fill(DS)
+            DGV.DataSource = DS.Tables(0)
+        Catch ex As Exception
+            MsgBox(e.ToString)
+        End Try
+
     End Sub
     Sub isiGrid()
         Try
-            DA = New Odbc.OdbcDataAdapter("SELECT * FROM `tb_pinjam`where status='belum kembali'", conn)
+            DA = New Odbc.OdbcDataAdapter("SELECT * FROM `tb_pinjam` where status = 'belum kembali'", conn)
             DS = New DataSet
             DA.Fill(DS)
-            tableKembali.DataSource = DS.Tables(0)
+            DGV.DataSource = DS.Tables(0)
         Catch ex As Exception
             MsgBox(ex.ToString)
 
         End Try
 
     End Sub
+    Sub isitextbox(ByVal x As Integer)
 
-    Sub setHeader()
-        tableKembali.Columns(1).HeaderText = "Nama Barang"
-        tableKembali.Columns(2).HeaderText = "Jumlah"
-        tableKembali.Columns(3).HeaderText = "Kode abrang"
-        tableKembali.Columns(4).HeaderText = "Kondisi"
+        txtname.Text = DGV.Rows(x).Cells(0).Value
+        txtjum.Text = DGV.Rows(x).Cells(2).Value
+    End Sub
 
-        tableKembali.Columns(1).Width = 90
-        tableKembali.Columns(2).Width = 120
-        tableKembali.Columns(3).Width = 110
-        tableKembali.Columns(4).Width = 110
+    Sub clear()
+        txtJumlah.Clear()
+        txtname.Clear()
+        txtPeminjam.Clear()
+        txtPeminjam.Focus()
+
+
+
+    End Sub
+
+    Private Sub txtname_TextChanged(sender As Object, e As EventArgs) Handles txtname.TextChanged
+
+    End Sub
+
+    Private Sub DGV_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV.CellMouseClick
+        isitextbox(e.RowIndex)
+    End Sub
+
+    Private Sub btnPinjam_Click(sender As Object, e As EventArgs) Handles btnPinjam.Click
+        Try
+            CMD = New OdbcCommand("SELECT * FROM tb_pinjam WHERE id_pinjam = '" & txtname.Text & "' AND jumlah = '" & txtJumlah.Text & "'", conn)
+            DR = CMD.ExecuteReader
+            DR.Read()
+            If DR.HasRows Then
+                RunQuery("UPDATE `tb_pinjam` SET `status`='kembali' WHERE id_pinjam = '" & txtname.Text & "'")
+                MsgBox("Data Berhasil di simpan", vbInformation, "Simpan")
+                isiGrid()
+                clear()
+
+            Else
+
+                a = txtjum.Text
+                b = txtJumlah.Text
+                jum = a - b
+                txtk.Text = jum
+
+
+                RunQuery("UPDATE `tb_pinjam` SET jumlah=" & txtk.Text & " WHERE id_pinjam = '" & txtname.Text & "'")
+                MsgBox("Data Berhasil di simpan", vbInformation, "Simpan")
+                isiGrid()
+                clear()
+
+
+            End If
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

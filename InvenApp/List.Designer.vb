@@ -27,7 +27,6 @@ Partial Class List
         Me.MenuPanel = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnHapus = New Guna.UI2.WinForms.Guna2Button()
         Me.tbListBarang = New System.Windows.Forms.DataGridView()
-        Me.btnCari = New System.Windows.Forms.Button()
         Me.txtNmBarang = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -44,7 +43,6 @@ Partial Class List
         '
         Me.MenuPanel.Controls.Add(Me.btnHapus)
         Me.MenuPanel.Controls.Add(Me.tbListBarang)
-        Me.MenuPanel.Controls.Add(Me.btnCari)
         Me.MenuPanel.Controls.Add(Me.txtNmBarang)
         Me.MenuPanel.Controls.Add(Me.Label1)
         Me.MenuPanel.Controls.Add(Me.Label5)
@@ -77,17 +75,8 @@ Partial Class List
         Me.tbListBarang.Location = New System.Drawing.Point(47, 134)
         Me.tbListBarang.Name = "tbListBarang"
         Me.tbListBarang.RowHeadersWidth = 62
-        Me.tbListBarang.Size = New System.Drawing.Size(727, 242)
+        Me.tbListBarang.Size = New System.Drawing.Size(486, 242)
         Me.tbListBarang.TabIndex = 22
-        '
-        'btnCari
-        '
-        Me.btnCari.Location = New System.Drawing.Point(320, 105)
-        Me.btnCari.Name = "btnCari"
-        Me.btnCari.Size = New System.Drawing.Size(33, 23)
-        Me.btnCari.TabIndex = 21
-        Me.btnCari.Text = "Cari"
-        Me.btnCari.UseVisualStyleBackColor = True
         '
         'txtNmBarang
         '
@@ -166,7 +155,6 @@ Partial Class List
     End Sub
     Friend WithEvents MenuPanel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents tbListBarang As DataGridView
-    Friend WithEvents btnCari As Button
     Friend WithEvents txtNmBarang As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label5 As Label

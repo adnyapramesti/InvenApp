@@ -32,6 +32,26 @@
         btnHapus.Enabled = True
     End Sub
 
+    Private Sub btnCari_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub txtNmBarang_TextChanged(sender As Object, e As EventArgs) Handles txtNmBarang.TextChanged
+        Try
+            DA = New Odbc.OdbcDataAdapter("SELECT * FROM `tb_barang` WHERE CONCAT_WS(id_brg, nama_barang, jumlah,kd_barang,kondisi) LIKE '%" & txtNmBarang.Text & "%' ", conn)
+            DS = New DataSet
+            DA.Fill(DS)
+            tbListBarang.DataSource = DS.Tables(0)
+        Catch ex As Exception
+            MsgBox(e.ToString)
+        End Try
+
+    End Sub
+
+    Private Sub tbListBarang_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles tbListBarang.CellContentClick
+
+    End Sub
+
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
         Dim result As DialogResult = MessageBox.Show("Apakah Anda Yakin Ingin Menghapus?", "Caption", MessageBoxButtons.YesNo)
         If result = DialogResult.Yes Then
@@ -50,7 +70,7 @@
                 MessageBox.Show("Data Berhasil Dihapus")
             End If
         End If
-            If result = DialogResult.No Then
+        If result = DialogResult.No Then
 
             btnEdit.Enabled = False
             btnHapus.Enabled = False

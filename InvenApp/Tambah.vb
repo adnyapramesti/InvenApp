@@ -40,9 +40,10 @@ Public Class Tambah
                 DR = CMD.ExecuteReader
                 DR.Read()
                 If Not DR.HasRows Then
-                    Dim simpan As String = "INSERT INTO tb_barang (id_brg,nama_barang,jumlah,kd_barang,kondisi) 
+                    Dim simpan As String = "INSERT INTO tb_barang (id_brg,nama_barang,jumlah,stok,kd_barang,kondisi) 
                             VALUE ('" & "','" _
                                   & txtNmBarang.Text & "','" _
+                                  & txtJumlah.Text & "','" _
                                   & txtJumlah.Text & "','" _
                                   & txtKdInventaris.Text & "','" _
                                   & txtKondisi.Text & "')"

@@ -24,7 +24,9 @@ Partial Class Pinjam
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.MenuPanel = New Guna.UI2.WinForms.Guna2Panel()
-        Me.txtKdInventaris = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbListBaran = New System.Windows.Forms.DataGridView()
+        Me.txtNama = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtIdBrg = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtKontak = New Guna.UI2.WinForms.Guna2TextBox()
@@ -34,22 +36,21 @@ Partial Class Pinjam
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtPeminjam = New Guna.UI2.WinForms.Guna2TextBox()
         Me.dateKembali = New System.Windows.Forms.DateTimePicker()
-        Me.datePinjam = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.btnPinjam = New Guna.UI2.WinForms.Guna2Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtJumlah = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.MenuPanel.SuspendLayout()
+        CType(Me.tbListBaran, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuPanel
         '
-        Me.MenuPanel.Controls.Add(Me.ComboBox1)
-        Me.MenuPanel.Controls.Add(Me.txtKdInventaris)
+        Me.MenuPanel.Controls.Add(Me.tbListBaran)
+        Me.MenuPanel.Controls.Add(Me.txtNama)
+        Me.MenuPanel.Controls.Add(Me.txtIdBrg)
         Me.MenuPanel.Controls.Add(Me.Label9)
         Me.MenuPanel.Controls.Add(Me.Label1)
         Me.MenuPanel.Controls.Add(Me.txtKontak)
@@ -59,49 +60,81 @@ Partial Class Pinjam
         Me.MenuPanel.Controls.Add(Me.Label7)
         Me.MenuPanel.Controls.Add(Me.txtPeminjam)
         Me.MenuPanel.Controls.Add(Me.dateKembali)
-        Me.MenuPanel.Controls.Add(Me.datePinjam)
         Me.MenuPanel.Controls.Add(Me.Label5)
         Me.MenuPanel.Controls.Add(Me.Label6)
-        Me.MenuPanel.Controls.Add(Me.Label3)
         Me.MenuPanel.Controls.Add(Me.btnPinjam)
         Me.MenuPanel.Controls.Add(Me.Label2)
         Me.MenuPanel.Controls.Add(Me.txtJumlah)
         Me.MenuPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MenuPanel.Location = New System.Drawing.Point(0, 0)
-        Me.MenuPanel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MenuPanel.Margin = New System.Windows.Forms.Padding(2)
         Me.MenuPanel.Name = "MenuPanel"
         Me.MenuPanel.ShadowDecoration.Parent = Me.MenuPanel
         Me.MenuPanel.Size = New System.Drawing.Size(850, 500)
         Me.MenuPanel.TabIndex = 5
         '
-        'txtKdInventaris
+        'tbListBaran
         '
-        Me.txtKdInventaris.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtKdInventaris.DefaultText = ""
-        Me.txtKdInventaris.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtKdInventaris.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtKdInventaris.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtKdInventaris.DisabledState.Parent = Me.txtKdInventaris
-        Me.txtKdInventaris.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtKdInventaris.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtKdInventaris.FocusedState.Parent = Me.txtKdInventaris
-        Me.txtKdInventaris.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtKdInventaris.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtKdInventaris.HoverState.Parent = Me.txtKdInventaris
-        Me.txtKdInventaris.Location = New System.Drawing.Point(137, 129)
-        Me.txtKdInventaris.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.txtKdInventaris.Name = "txtKdInventaris"
-        Me.txtKdInventaris.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtKdInventaris.PlaceholderText = ""
-        Me.txtKdInventaris.SelectedText = ""
-        Me.txtKdInventaris.ShadowDecoration.Parent = Me.txtKdInventaris
-        Me.txtKdInventaris.Size = New System.Drawing.Size(213, 23)
-        Me.txtKdInventaris.TabIndex = 1
+        Me.tbListBaran.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tbListBaran.Location = New System.Drawing.Point(137, 137)
+        Me.tbListBaran.Name = "tbListBaran"
+        Me.tbListBaran.RowHeadersWidth = 62
+        Me.tbListBaran.Size = New System.Drawing.Size(348, 91)
+        Me.tbListBaran.TabIndex = 23
+        '
+        'txtNama
+        '
+        Me.txtNama.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtNama.DefaultText = ""
+        Me.txtNama.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtNama.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtNama.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtNama.DisabledState.Parent = Me.txtNama
+        Me.txtNama.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtNama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtNama.FocusedState.Parent = Me.txtNama
+        Me.txtNama.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtNama.HoverState.Parent = Me.txtNama
+        Me.txtNama.Location = New System.Drawing.Point(137, 102)
+        Me.txtNama.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtNama.Name = "txtNama"
+        Me.txtNama.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNama.PlaceholderText = ""
+        Me.txtNama.SelectedText = ""
+        Me.txtNama.ShadowDecoration.Parent = Me.txtNama
+        Me.txtNama.Size = New System.Drawing.Size(348, 23)
+        Me.txtNama.TabIndex = 21
+        '
+        'txtIdBrg
+        '
+        Me.txtIdBrg.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtIdBrg.DefaultText = ""
+        Me.txtIdBrg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtIdBrg.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtIdBrg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtIdBrg.DisabledState.Parent = Me.txtIdBrg
+        Me.txtIdBrg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtIdBrg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtIdBrg.FocusedState.Parent = Me.txtIdBrg
+        Me.txtIdBrg.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtIdBrg.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtIdBrg.HoverState.Parent = Me.txtIdBrg
+        Me.txtIdBrg.Location = New System.Drawing.Point(137, 233)
+        Me.txtIdBrg.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtIdBrg.Name = "txtIdBrg"
+        Me.txtIdBrg.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtIdBrg.PlaceholderText = ""
+        Me.txtIdBrg.ReadOnly = True
+        Me.txtIdBrg.SelectedText = ""
+        Me.txtIdBrg.ShadowDecoration.Parent = Me.txtIdBrg
+        Me.txtIdBrg.Size = New System.Drawing.Size(348, 23)
+        Me.txtIdBrg.TabIndex = 1
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(43, 223)
+        Me.Label9.Location = New System.Drawing.Point(43, 327)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(89, 13)
@@ -132,30 +165,30 @@ Partial Class Pinjam
         Me.txtKontak.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtKontak.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtKontak.HoverState.Parent = Me.txtKontak
-        Me.txtKontak.Location = New System.Drawing.Point(137, 223)
-        Me.txtKontak.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtKontak.Location = New System.Drawing.Point(137, 327)
+        Me.txtKontak.Margin = New System.Windows.Forms.Padding(2)
         Me.txtKontak.Name = "txtKontak"
         Me.txtKontak.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtKontak.PlaceholderText = ""
         Me.txtKontak.SelectedText = ""
         Me.txtKontak.ShadowDecoration.Parent = Me.txtKontak
-        Me.txtKontak.Size = New System.Drawing.Size(213, 23)
+        Me.txtKontak.Size = New System.Drawing.Size(348, 23)
         Me.txtKontak.TabIndex = 19
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(44, 131)
+        Me.Label4.Location = New System.Drawing.Point(44, 235)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 13)
+        Me.Label4.Size = New System.Drawing.Size(55, 13)
         Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Kode Inventaris"
+        Me.Label4.Text = "ID Barang"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(43, 190)
+        Me.Label8.Location = New System.Drawing.Point(43, 294)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(73, 13)
@@ -176,20 +209,20 @@ Partial Class Pinjam
         Me.txtDivisi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtDivisi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtDivisi.HoverState.Parent = Me.txtDivisi
-        Me.txtDivisi.Location = New System.Drawing.Point(137, 190)
-        Me.txtDivisi.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDivisi.Location = New System.Drawing.Point(137, 294)
+        Me.txtDivisi.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDivisi.Name = "txtDivisi"
         Me.txtDivisi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtDivisi.PlaceholderText = ""
         Me.txtDivisi.SelectedText = ""
         Me.txtDivisi.ShadowDecoration.Parent = Me.txtDivisi
-        Me.txtDivisi.Size = New System.Drawing.Size(213, 23)
+        Me.txtDivisi.Size = New System.Drawing.Size(348, 23)
         Me.txtDivisi.TabIndex = 17
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(43, 158)
+        Me.Label7.Location = New System.Drawing.Point(43, 262)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(52, 13)
@@ -210,29 +243,22 @@ Partial Class Pinjam
         Me.txtPeminjam.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtPeminjam.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPeminjam.HoverState.Parent = Me.txtPeminjam
-        Me.txtPeminjam.Location = New System.Drawing.Point(137, 158)
-        Me.txtPeminjam.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPeminjam.Location = New System.Drawing.Point(137, 262)
+        Me.txtPeminjam.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPeminjam.Name = "txtPeminjam"
         Me.txtPeminjam.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPeminjam.PlaceholderText = ""
         Me.txtPeminjam.SelectedText = ""
         Me.txtPeminjam.ShadowDecoration.Parent = Me.txtPeminjam
-        Me.txtPeminjam.Size = New System.Drawing.Size(213, 23)
+        Me.txtPeminjam.Size = New System.Drawing.Size(348, 23)
         Me.txtPeminjam.TabIndex = 15
         '
         'dateKembali
         '
-        Me.dateKembali.Location = New System.Drawing.Point(137, 314)
+        Me.dateKembali.Location = New System.Drawing.Point(137, 418)
         Me.dateKembali.Name = "dateKembali"
-        Me.dateKembali.Size = New System.Drawing.Size(213, 20)
+        Me.dateKembali.Size = New System.Drawing.Size(348, 20)
         Me.dateKembali.TabIndex = 14
-        '
-        'datePinjam
-        '
-        Me.datePinjam.Location = New System.Drawing.Point(137, 286)
-        Me.datePinjam.Name = "datePinjam"
-        Me.datePinjam.Size = New System.Drawing.Size(213, 20)
-        Me.datePinjam.TabIndex = 13
         '
         'Label5
         '
@@ -248,22 +274,12 @@ Partial Class Pinjam
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(43, 314)
+        Me.Label6.Location = New System.Drawing.Point(43, 418)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(86, 13)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Tanggal Kembali"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(43, 286)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 13)
-        Me.Label3.TabIndex = 11
-        Me.Label3.Text = "Tanggal Pinjam"
         '
         'btnPinjam
         '
@@ -272,8 +288,8 @@ Partial Class Pinjam
         Me.btnPinjam.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnPinjam.ForeColor = System.Drawing.Color.White
         Me.btnPinjam.HoverState.Parent = Me.btnPinjam
-        Me.btnPinjam.Location = New System.Drawing.Point(41, 359)
-        Me.btnPinjam.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnPinjam.Location = New System.Drawing.Point(41, 463)
+        Me.btnPinjam.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPinjam.Name = "btnPinjam"
         Me.btnPinjam.ShadowDecoration.Parent = Me.btnPinjam
         Me.btnPinjam.Size = New System.Drawing.Size(120, 29)
@@ -283,7 +299,7 @@ Partial Class Pinjam
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(43, 252)
+        Me.Label2.Location = New System.Drawing.Point(43, 356)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(40, 13)
@@ -304,27 +320,19 @@ Partial Class Pinjam
         Me.txtJumlah.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtJumlah.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtJumlah.HoverState.Parent = Me.txtJumlah
-        Me.txtJumlah.Location = New System.Drawing.Point(137, 252)
-        Me.txtJumlah.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtJumlah.Location = New System.Drawing.Point(137, 356)
+        Me.txtJumlah.Margin = New System.Windows.Forms.Padding(2)
         Me.txtJumlah.Name = "txtJumlah"
         Me.txtJumlah.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtJumlah.PlaceholderText = ""
         Me.txtJumlah.SelectedText = ""
         Me.txtJumlah.ShadowDecoration.Parent = Me.txtJumlah
-        Me.txtJumlah.Size = New System.Drawing.Size(213, 23)
+        Me.txtJumlah.Size = New System.Drawing.Size(348, 23)
         Me.txtJumlah.TabIndex = 2
         '
         'Timer1
         '
         Me.Timer1.Interval = 10
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(137, 100)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(213, 21)
-        Me.ComboBox1.TabIndex = 21
         '
         'Pinjam
         '
@@ -337,6 +345,7 @@ Partial Class Pinjam
         Me.Text = "Form3"
         Me.MenuPanel.ResumeLayout(False)
         Me.MenuPanel.PerformLayout()
+        CType(Me.tbListBaran, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -347,17 +356,16 @@ Partial Class Pinjam
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents txtJumlah As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents txtKdInventaris As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtIdBrg As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents dateKembali As DateTimePicker
-    Friend WithEvents datePinjam As DateTimePicker
     Friend WithEvents Label8 As Label
     Friend WithEvents txtDivisi As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents txtPeminjam As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents txtKontak As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents txtNama As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbListBaran As DataGridView
 End Class
