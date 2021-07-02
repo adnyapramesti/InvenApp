@@ -31,13 +31,13 @@ Partial Class Kembali
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnPinjam = New Guna.UI2.WinForms.Guna2Button()
         Me.MenuPanel = New Guna.UI2.WinForms.Guna2Panel()
+        Me.txtk = New Guna.UI2.WinForms.Guna2TextBox()
         Me.DGV = New System.Windows.Forms.DataGridView()
         Me.txtname = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtJumlah = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtjum = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.txtk = New Guna.UI2.WinForms.Guna2TextBox()
         Me.MenuPanel.SuspendLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -145,6 +145,31 @@ Partial Class Kembali
         Me.MenuPanel.Size = New System.Drawing.Size(839, 500)
         Me.MenuPanel.TabIndex = 7
         '
+        'txtk
+        '
+        Me.txtk.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtk.DefaultText = ""
+        Me.txtk.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtk.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtk.DisabledState.Parent = Me.txtk
+        Me.txtk.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtk.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtk.FocusedState.Parent = Me.txtk
+        Me.txtk.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtk.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtk.HoverState.Parent = Me.txtk
+        Me.txtk.Location = New System.Drawing.Point(536, 322)
+        Me.txtk.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtk.Name = "txtk"
+        Me.txtk.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtk.PlaceholderText = ""
+        Me.txtk.SelectedText = ""
+        Me.txtk.ShadowDecoration.Parent = Me.txtk
+        Me.txtk.Size = New System.Drawing.Size(274, 23)
+        Me.txtk.TabIndex = 29
+        Me.txtk.Visible = False
+        '
         'DGV
         '
         Me.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -245,31 +270,6 @@ Partial Class Kembali
         Me.txtjum.Size = New System.Drawing.Size(274, 23)
         Me.txtjum.TabIndex = 28
         Me.txtjum.Visible = False
-        '
-        'txtk
-        '
-        Me.txtk.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtk.DefaultText = ""
-        Me.txtk.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtk.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtk.DisabledState.Parent = Me.txtk
-        Me.txtk.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtk.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtk.FocusedState.Parent = Me.txtk
-        Me.txtk.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtk.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtk.HoverState.Parent = Me.txtk
-        Me.txtk.Location = New System.Drawing.Point(149, 283)
-        Me.txtk.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtk.Name = "txtk"
-        Me.txtk.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtk.PlaceholderText = ""
-        Me.txtk.SelectedText = ""
-        Me.txtk.ShadowDecoration.Parent = Me.txtk
-        Me.txtk.Size = New System.Drawing.Size(274, 23)
-        Me.txtk.TabIndex = 29
-        Me.txtk.Visible = False
         '
         'Kembali
         '

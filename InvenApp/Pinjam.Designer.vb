@@ -255,6 +255,7 @@ Partial Class Pinjam
         '
         'dateKembali
         '
+        Me.dateKembali.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dateKembali.Location = New System.Drawing.Point(137, 418)
         Me.dateKembali.Name = "dateKembali"
         Me.dateKembali.Size = New System.Drawing.Size(348, 20)

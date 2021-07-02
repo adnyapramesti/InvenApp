@@ -1,4 +1,4 @@
-﻿Imports System.Data.Odbc
+﻿
 Public Class Kembali
     Dim jum, a, b As Integer
 
@@ -15,7 +15,7 @@ Public Class Kembali
 
     Private Sub txtPeminjam_TextChanged(sender As Object, e As EventArgs) Handles txtPeminjam.TextChanged
         Try
-            DA = New Odbc.OdbcDataAdapter("SELECT * FROM `tb_pinjam` where status = 'belum kembali' AND nama_peminjam LIKE %'" & txtPeminjam.Text & "'", conn)
+            DA = New Odbc.OdbcDataAdapter("SELECT * FROM `tb_pinjam` where status = 'belum kembali' AND nama_peminjam LIKE '%" & txtPeminjam.Text & "%'", conn)
             DS = New DataSet
             DA.Fill(DS)
             DGV.DataSource = DS.Tables(0)
@@ -39,7 +39,7 @@ Public Class Kembali
     Sub isitextbox(ByVal x As Integer)
 
         txtname.Text = DGV.Rows(x).Cells(0).Value
-        txtjum.Text = DGV.Rows(x).Cells(2).Value
+        txtjum.Text = DGV.Rows(x).Cells(3).Value
     End Sub
 
     Sub clear()
@@ -62,11 +62,12 @@ Public Class Kembali
 
     Private Sub btnPinjam_Click(sender As Object, e As EventArgs) Handles btnPinjam.Click
         Try
-            CMD = New OdbcCommand("SELECT * FROM tb_pinjam WHERE id_pinjam = '" & txtname.Text & "' AND jumlah = '" & txtJumlah.Text & "'", conn)
+            CMD = New Odbc.OdbcCommand("SELECT * FROM tb_pinjam WHERE id_pinjam = '" & txtname.Text & "' AND jumlah = '" & txtJumlah.Text & "'", conn)
             DR = CMD.ExecuteReader
             DR.Read()
             If DR.HasRows Then
-                RunQuery("UPDATE `tb_pinjam` SET `status`='kembali' WHERE id_pinjam = '" & txtname.Text & "'")
+                Dim tgl = Format(dateKembali.Value, "yyyy-MM-dd hh:mm")
+                RunQuery("UPDATE `tb_pinjam` SET `status`='kembali', `tgl_kembali` = '" & tgl & "' WHERE id_pinjam = '" & txtname.Text & "'")
                 MsgBox("Data Berhasil di simpan", vbInformation, "Simpan")
                 isiGrid()
                 clear()
@@ -79,7 +80,7 @@ Public Class Kembali
                 txtk.Text = jum
 
 
-                RunQuery("UPDATE `tb_pinjam` SET jumlah=" & txtk.Text & " WHERE id_pinjam = '" & txtname.Text & "'")
+                RunQuery("UPDATE `tb_pinjam` SET `jumlah`='" & txtk.Text & "' WHERE id_pinjam = '" & txtname.Text & "'")
                 MsgBox("Data Berhasil di simpan", vbInformation, "Simpan")
                 isiGrid()
                 clear()

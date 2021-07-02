@@ -73,14 +73,15 @@ Public Class Pinjam
                 DR = CMD.ExecuteReader
                 DR.Read()
                 If DR.HasRows Then
-                    Dim simpan As String = "INSERT INTO tb_pinjam (nama_peminjam,jumlah,id_brg,instansi,kontak,tgl_kembali) 
+                    Dim tgl = Format(dateKembali.Value, "yyyy-MM-dd hh:mm")
+                    Dim simpan As String = "INSERT INTO tb_pinjam (nama_peminjam,jumlah,id_brg,instansi,kontak,tgl_pred_kembali) 
                             VALUE ('" _
                                   & txtPeminjam.Text & "','" _
                                   & txtJumlah.Text & "','" _
                                   & txtIdBrg.Text & "','" _
                                   & txtDivisi.Text & "','" _
                                   & txtKontak.Text & "','" _
-                                  & dateKembali.Value & "')"
+                                  & tgl & "')"
                     CMD = New OdbcCommand(simpan, conn)
                     CMD.ExecuteNonQuery()
                     MsgBox("Data Berhasil di simpan", vbInformation, "Simpan")
@@ -96,5 +97,18 @@ Public Class Pinjam
         End Try
     End Sub
 
+    Sub clear()
+        txtJumlah.Clear()
+        txtNama.Clear()
+        txtPeminjam.Clear()
+        txtDivisi.Clear()
+        txtKontak.Clear()
+        txtIdBrg.Clear()
 
+
+        txtNama.Focus()
+
+
+
+    End Sub
 End Class

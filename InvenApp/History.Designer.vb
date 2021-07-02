@@ -24,6 +24,7 @@ Partial Class History
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.MenuPanel = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.tableHistory = New System.Windows.Forms.DataGridView()
         Me.txtPeminjam = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -35,16 +36,31 @@ Partial Class History
         '
         'MenuPanel
         '
+        Me.MenuPanel.Controls.Add(Me.Guna2Button1)
         Me.MenuPanel.Controls.Add(Me.tableHistory)
         Me.MenuPanel.Controls.Add(Me.txtPeminjam)
         Me.MenuPanel.Controls.Add(Me.Label1)
         Me.MenuPanel.Controls.Add(Me.Label5)
         Me.MenuPanel.Location = New System.Drawing.Point(-2, -10)
-        Me.MenuPanel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MenuPanel.Margin = New System.Windows.Forms.Padding(2)
         Me.MenuPanel.Name = "MenuPanel"
         Me.MenuPanel.ShadowDecoration.Parent = Me.MenuPanel
         Me.MenuPanel.Size = New System.Drawing.Size(853, 520)
         Me.MenuPanel.TabIndex = 13
+        '
+        'Guna2Button1
+        '
+        Me.Guna2Button1.CheckedState.Parent = Me.Guna2Button1
+        Me.Guna2Button1.CustomImages.Parent = Me.Guna2Button1
+        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button1.HoverState.Parent = Me.Guna2Button1
+        Me.Guna2Button1.Location = New System.Drawing.Point(14, 441)
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
+        Me.Guna2Button1.Size = New System.Drawing.Size(180, 45)
+        Me.Guna2Button1.TabIndex = 23
+        Me.Guna2Button1.Text = "EXport to Excel"
         '
         'tableHistory
         '
@@ -52,7 +68,7 @@ Partial Class History
         Me.tableHistory.Location = New System.Drawing.Point(14, 133)
         Me.tableHistory.Name = "tableHistory"
         Me.tableHistory.RowHeadersWidth = 62
-        Me.tableHistory.Size = New System.Drawing.Size(595, 340)
+        Me.tableHistory.Size = New System.Drawing.Size(595, 302)
         Me.tableHistory.TabIndex = 22
         '
         'txtPeminjam
@@ -70,7 +86,7 @@ Partial Class History
         Me.txtPeminjam.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPeminjam.HoverState.Parent = Me.txtPeminjam
         Me.txtPeminjam.Location = New System.Drawing.Point(137, 106)
-        Me.txtPeminjam.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPeminjam.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPeminjam.Name = "txtPeminjam"
         Me.txtPeminjam.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPeminjam.PlaceholderText = ""
@@ -126,4 +142,5 @@ Partial Class History
     Friend WithEvents Label1 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
 End Class
