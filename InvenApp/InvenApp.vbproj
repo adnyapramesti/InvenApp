@@ -76,6 +76,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface1.vb" />
     <Compile Include="Koneksi.vb" />
     <Compile Include="Parent.vb">
       <SubType>Form</SubType>

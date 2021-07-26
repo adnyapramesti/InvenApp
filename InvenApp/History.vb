@@ -54,16 +54,16 @@
             Next
 
             'Membuat Font Bold
-            ApExcel.Range("A1:I1").Font.Bold = True
+            ApExcel.Range("A1:J1").Font.Bold = True
 
             'Memberi warna backgound
-            ApExcel.Range("A1:I1").interior.colorindex = 36
+            ApExcel.Range("A1:J1").interior.colorindex = 36
 
             'Agar nilai cell yang panjang menjadi beberapa baris
-            ApExcel.Range("A2:I" & tableHistory.RowCount + 1).WrapText = True
+            ApExcel.Range("A2:J" & tableHistory.RowCount + 1).WrapText = True
 
             'Membuat border hitam
-            ApExcel.Range("A1:I" & tableHistory.RowCount + 1).Borders.Color = RGB(0, 0, 0)
+            ApExcel.Range("A1:J" & tableHistory.RowCount + 1).Borders.Color = RGB(0, 0, 0)
 
             ApExcel.Visible = True
 
